@@ -1,0 +1,553 @@
+* {
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------- ( NAVBAR ) ---------------------------------- */
+
+#navbar {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    left: 0;
+    padding: 0 calc((100vw - 1200px) / 2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav_logo_img {
+    height: 100%;
+    width: 56px;
+}
+
+.nav_list {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    z-index: 10;
+}
+
+.nav_item {
+    display: flex;
+    height: 100%;
+    margin: 0 8px;
+}
+
+.nav_link {
+    align-items: center;
+    border-top: 2px solid transparent;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px 0;
+    padding: 0 10px;
+    text-decoration: none;
+    transition: scale 0.3s ease;
+}
+
+.nav_item :hover {
+    color: rgb(255, 0, 0);
+}
+
+/* ---------------------------------- SECTION 1 ( HOME ) ---------------------------------- */
+
+#home {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 400px 16px 300px 16px;
+    position: relative;
+}
+
+#home::after {
+    background: url("assets/bg.svg") bottom center;
+    content: "";
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+.home_title {
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.home_subtitle {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.home_btn {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid rgb(220, 220, 220);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    height: 48px;
+    justify-content: center;
+    margin-top: 32px;
+    outline: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: scale 0.3s ease;
+}
+
+.home_btn :hover {
+    color: rgb(255, 0, 0);
+}
+
+.home_btn_text {
+    margin-left: 8px;
+}
+
+/* ---------------------------------- SECTION 2 ( ABOUT ) ---------------------------------- */
+
+.contenedor_footer_central {
+    padding: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 6, 6);
+}
+
+.copyright-text {
+    color: rgb(0, 0, 0);
+}
+
+/** ---- Portfolio ---- **/
+
+.portfolio{
+    padding: 3.125rem 0;
+}
+
+.portfolio-attribution{
+    font-weight: 400;
+    margin-top: .625rem;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 3.125rem;
+}
+
+.work{
+    border-radius: .625rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    display: block;
+    transition: transform .25s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0 0 0 / 0.6), var(--secondaryColor));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    text-align: center;
+    font-size: .875rem;
+    transition: height .25s ease;
+}
+
+.layer h3{
+    font-size: 2em;
+}
+
+.layer p{
+    font-size: 1.2em;
+}
+
+.layer h3, .layer p{
+    margin-bottom: 1.25rem;
+}
+
+.layer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .625rem;
+    font-size: 1.5rem;
+    color: var(--secondaryColor);
+    background-color: var(--thirdColor);
+    border-radius: 50%;
+    padding: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    width: fit-content;
+    padding: .875rem 2.5rem;
+    border-radius: .375rem;
+    transition: background-color .25s;
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--secondaryColor);
+    color: var(--thirdColor);
+    margin-bottom: 3.125rem;
+    transition: transform .25s;
+}
+
+/** ----- General Styles ----- **/
+
+:root{
+
+    /** ---- Colors ---- **/
+    --primaryColor: hsl(0, 0%, 100%);
+    --secondaryColor: hsl(0, 0%, 0%);
+    --thirdColor: hsl(0, 0%, 100%);
+    --fourthColor: hsl(0, 100%, 49%);
+    --fifthColor: hsl(0, 100%, 48%);
+    
+    /** ---- Fonts ---- **/
+    --dmSans: 'DM Sans', sans-serif; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.125rem;
+    background: var(--primaryColor);
+    color: var(--thirdColor);
+    font-family: var(--dmSans);
+}
+
+h2, h3{
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+.blue{
+    color: var(--secondaryColor);
+}
+
+.container{
+    padding: .625rem 10%;
+}
+
+/** ---- Portfolio ---- **/
+
+.portfolio{
+    padding: 3.125rem 0;
+}
+
+.Mi_portafolio_Tittle{
+    color: black;
+}
+.portfolio-attribution{
+    font-weight: 400;
+    margin-top: .625rem;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 3.125rem;
+}
+
+.work{
+    border-radius: .625rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    display: block;
+    transition: transform .25s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0 0 0 / 0.6), var(--secondaryColor));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2.5rem;
+    text-align: center;
+    font-size: .875rem;
+    transition: height .25s ease;
+}
+
+.layer h3{
+    font-size: 2em;
+}
+
+.layer p{
+    font-size: 1.2em;
+}
+
+.layer h3, .layer p{
+    margin-bottom: 1.25rem;
+}
+
+.layer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .625rem;
+    font-size: 1.5rem;
+    color: var(--secondaryColor);
+    background-color: var(--thirdColor);
+    border-radius: 50%;
+    padding: 2rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    width: fit-content;
+    padding: .875rem 2.5rem;
+    border-radius: .375rem;
+    transition: background-color .25s;
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--secondaryColor);
+    color: var(--thirdColor);
+    margin-bottom: 3.125rem;
+    transition: transform .25s;
+}
+
+/** ----- Responsive ----- **/
+
+@media only screen and (min-width: 2150px){
+    .container{
+        padding: .625rem 20%;
+    }
+
+    .header-text{
+        margin-top: 40%;
+    }
+}
+
+@media only screen and (max-width: 1195px){
+
+   
+    /** --- Portfolio --- **/
+    
+    .work-list{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .layer h3{
+        font-size: 1.5em;
+    }
+    
+    .layer p{
+        font-size: 1em;
+    }
+    
+    .layer h3, .layer p{
+        margin-bottom: .9375rem;
+    }
+
+    .layer a{
+        font-size: 1rem;
+        padding: .625rem;
+        border-radius: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 1020px){
+
+    /** --- Portfolio --- **/
+
+    .btn{
+        padding: .875rem 2.5rem
+    }}
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 100px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
